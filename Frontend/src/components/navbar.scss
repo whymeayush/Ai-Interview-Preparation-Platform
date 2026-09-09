@@ -1,0 +1,114 @@
+$bg-nav:         #161b22;
+$border-color:   #2a3348;
+$text-primary:   #e6edf3;
+$text-muted:     #7d8590;
+$accent:         #ff2d78;
+
+.app-navbar {
+    width: 100%;
+    background-color: $bg-nav;
+    border-bottom: 1px solid $border-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+
+    .navbar__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.85rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar__logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: $text-primary;
+        font-weight: 700;
+        font-size: 1.15rem;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        .logo__icon {
+            color: $accent;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight {
+            color: $accent;
+        }
+    }
+
+    .navbar__actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .user-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid $border-color;
+        padding: 0.35rem 0.75rem;
+        border-radius: 2rem;
+
+        .user-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, $accent, #d4145a);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .user-name {
+            font-size: 0.85rem;
+            color: $text-primary;
+            font-weight: 500;
+        }
+    }
+
+    .navbar__logout-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        color: $text-muted;
+        padding: 0.45rem 0.9rem;
+        border-radius: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        svg {
+            stroke: currentColor;
+        }
+
+        &:hover {
+            background-color: rgba($accent, 0.12);
+            border-color: rgba($accent, 0.5);
+            color: #ff6b9d;
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
